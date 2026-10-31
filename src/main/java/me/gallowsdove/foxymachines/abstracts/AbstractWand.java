@@ -60,7 +60,7 @@ public abstract class AbstractWand extends SlimefunItem implements NotPlaceable,
             Tag<Material> tag = Bukkit.getTag(Tag.REGISTRY_BLOCKS, NamespacedKey.minecraft(value.toLowerCase()), Material.class);
             SlimefunTag slimefunTag = SlimefunTag.getTag(value);
             if (tag == null && slimefunTag == null) {
-                FoxyMachines.log(Level.WARNING, "Invalid Entry in \"" + name + "\": " + value);
+                FoxyMachines.getInstance().getLogger().log(Level.WARNING, "Invalid Entry in \"" + name + "\": " + value);
                 continue;
             }
 
