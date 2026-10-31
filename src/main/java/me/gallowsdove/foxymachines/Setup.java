@@ -45,7 +45,7 @@ import me.gallowsdove.foxymachines.implementation.weapons.HealingBow;
 import me.gallowsdove.foxymachines.types.FoxyRecipeType;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
-import org.bukkit.NamespacedKey;
+import io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -139,7 +139,7 @@ final class ItemSetup {
                 null, null, null
                 }, 1).register(FoxyMachines.getInstance());
         new SimpleMaterial(Items.DEMONIC_PLATE, RecipeType.COMPRESSOR, new ItemStack[]{
-                new SlimefunItemStack(Items.DEMONIC_INGOT.item(), 8).item(), null, null,
+                new SlimefunItemStack(Items.DEMONIC_INGOT, 8).item(), null, null,
                 null, null, null,
                 null, null, null
                }, 1).register(FoxyMachines.getInstance());
@@ -219,7 +219,7 @@ final class ItemSetup {
                 new ItemStack(Material.LILY_OF_THE_VALLEY), new ItemStack(Material.PINK_TULIP), new ItemStack(Material.CORNFLOWER)
                 }, 1).register(FoxyMachines.getInstance());
         new SimpleMaterial(Items.PURE_BONE_DUST, RecipeType.COMPRESSOR, new ItemStack[] {
-                new SlimefunItemStack(Items.PURIFIED_BONE.item(), 6).item(), null, null,
+                new SlimefunItemStack(Items.PURIFIED_BONE, 6).item(), null, null,
                 null, null, null,
                 null, null, null
                 }, 1).register(FoxyMachines.getInstance());
