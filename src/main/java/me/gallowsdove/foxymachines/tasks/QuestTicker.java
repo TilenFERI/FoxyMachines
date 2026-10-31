@@ -5,10 +5,11 @@ import me.gallowsdove.foxymachines.Items;
 import me.gallowsdove.foxymachines.utils.QuestUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
+import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-public class QuestTicker implements Runnable{
+public class QuestTicker extends BukkitRunnable {
     @Override
     public void run() {
         ThreadLocalRandom random = ThreadLocalRandom.current();
