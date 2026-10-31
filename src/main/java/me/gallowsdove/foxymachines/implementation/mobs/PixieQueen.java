@@ -154,7 +154,7 @@ public class PixieQueen extends CustomBoss {
 
         event.getDrops().clear();
         Location loc = event.getEntity().getLocation();
-        loc.getWorld().dropItemNaturally(loc, new SlimefunItemStack(Items.PIXIE_QUEEN_HEART, 1));
+        loc.getWorld().dropItemNaturally(loc, new SlimefunItemStack(Items.PIXIE_QUEEN_HEART, 1).item());
         loc.getWorld().spawn(loc, ExperienceOrb.class).setExperience(1400 + ThreadLocalRandom.current().nextInt(600));
     }
 
