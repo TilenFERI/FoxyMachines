@@ -22,7 +22,7 @@ import java.util.UUID;
 
 public class SpongeWand extends AbstractWand {
     public SpongeWand() {
-        super(Items.SPONGE_WAND.item(), RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+        super(Items.SPONGE_WAND, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 Items.NUCLEAR_SALT.item(), Items.WIRELESS_TRANSMITTER.item(), Items.NUCLEAR_SALT.item(),
                 Items.DEMONIC_PLATE.item(), SlimefunItems.PROGRAMMABLE_ANDROID_2.item(), Items.DEMONIC_PLATE.item(),
                 Items.NUCLEAR_SALT.item(), Items.COMPRESSED_SPONGE.item(), Items.NUCLEAR_SALT.item()
