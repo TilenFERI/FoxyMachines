@@ -1,8 +1,8 @@
 package me.gallowsdove.foxymachines.listeners;
 
 import io.github.mooy1.infinitylib.common.Scheduler;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
 import me.gallowsdove.foxymachines.Items;
 import me.gallowsdove.foxymachines.implementation.weapons.CelestialSword;
 import me.gallowsdove.foxymachines.implementation.weapons.CursedSword;
