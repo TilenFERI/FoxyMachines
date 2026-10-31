@@ -16,7 +16,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class CelestialSword extends OnHitWeapon {
     public CelestialSword() {
-        super(Items.WEAPONS_AND_ARMORS_ITEM_GROUP.item(), Items.CELESTIAL_SWORD.item(), RecipeType.ANCIENT_ALTAR, new ItemStack[] {
+        super(Items.WEAPONS_AND_ARMORS_ITEM_GROUP, Items.CELESTIAL_SWORD, RecipeType.ANCIENT_ALTAR, new ItemStack[] {
                 Items.MAGIC_LUMP_5.item(), Items.POSEIDONS_BLESSING.item(), Items.MAGIC_LUMP_5.item(),
                 Items.PURE_BONE_DUST.item(), new ItemStack(Material.NETHERITE_SWORD), Items.PURE_BONE_DUST.item(),
                 Items.MAGIC_LUMP_5.item(), Items.POSEIDONS_BLESSING.item(), Items.MAGIC_LUMP_5.item()
