@@ -20,7 +20,7 @@ public class PositionSelector extends SlimefunItem implements NotPlaceable, Rech
     public static final float COST = 4F;
 
     public PositionSelector() {
-        super(Items.TOOLS_ITEM_GROUP.item(), Items.POSITION_SELECTOR.item(), RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+        super(Items.TOOLS_ITEM_GROUP, Items.POSITION_SELECTOR, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 Items.SWEET_INGOT.item(), Items.WIRELESS_TRANSMITTER.item(), Items.SWEET_INGOT.item(),
                 SlimefunItems.CORINTHIAN_BRONZE_INGOT.item(), SlimefunItems.BIG_CAPACITOR.item(), SlimefunItems.CORINTHIAN_BRONZE_INGOT.item(),
                 Items.SWEET_INGOT.item(), SlimefunItems.CORINTHIAN_BRONZE_INGOT.item(), Items.SWEET_INGOT.item()
