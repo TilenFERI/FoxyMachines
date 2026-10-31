@@ -1,6 +1,5 @@
 package me.gallowsdove.foxymachines.abstracts;
 
-import io.github.mooy1.infinitylib.common.Events;
 import lombok.Getter;
 import me.gallowsdove.foxymachines.FoxyMachines;
 
@@ -148,7 +147,7 @@ public abstract class CustomMob {
     }
 
     static {
-        Events.registerListener(new Listener() {
+        Bukkit.getPluginManager().registerEvents(new Listener() {
 
             @EventHandler
             public void onTarget(@Nonnull EntityTargetEvent event) {
@@ -221,7 +220,7 @@ public abstract class CustomMob {
                     event.setCancelled(true);
                 }
             }
-        });
+        }, FoxyMachines.getInstance());
     }
 
 }
