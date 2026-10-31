@@ -25,7 +25,7 @@ public class CursedSword extends OnHitWeapon {
             new PotionEffect(PotionEffectType.WITHER, 80, 1, false, false));
 
     public CursedSword() {
-        super(Items.WEAPONS_AND_ARMORS_ITEM_GROUP.item(), Items.CURSED_SWORD.item(), RecipeType.ANCIENT_ALTAR, new ItemStack[] {
+        super(Items.WEAPONS_AND_ARMORS_ITEM_GROUP, Items.CURSED_SWORD, RecipeType.ANCIENT_ALTAR, new ItemStack[] {
                 Items.BLOOD.item(), Items.CURSED_RABBIT_PAW.item(), Items.BLOOD.item(),
                 Items.MAGIC_LUMP_5.item(), new ItemStack(Material.NETHERITE_SWORD), Items.MAGIC_LUMP_5.item(),
                 Items.BLOOD.item(), Items.BLOOD_INFUSED_SKULL.item(), Items.BLOOD.item()
