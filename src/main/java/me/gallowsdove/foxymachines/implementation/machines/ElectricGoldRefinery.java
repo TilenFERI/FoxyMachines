@@ -83,18 +83,18 @@ public class ElectricGoldRefinery extends SlimefunItem implements EnergyNetCompo
                     menu.replaceExistingItem(32, CustomItemStack.create(Material.RED_STAINED_GLASS_PANE, "&6Current Recipe: &cNONE", "", "&e> Choose on the left to change it"));
                 } else {
                     switch (BlockStorage.getLocationInfo(b.getLocation(), "gold_recipe")) {
-                        case "0" -> menu.replaceExistingItem(32, new CustomItemStack(Material.GOLD_INGOT, "&6Current Recipe: &fGold Ingot &7(4 Carat)", "", "&e> Choose on the left to change it"));
-                        case "1" -> menu.replaceExistingItem(32, new CustomItemStack(Material.GOLD_INGOT, "&6Current Recipe: &fGold Ingot &7(6 Carat)", "", "&e> Choose on the left to change it"));
-                        case "2" -> menu.replaceExistingItem(32, new CustomItemStack(Material.GOLD_INGOT, "&6Current Recipe: &fGold Ingot &7(8 Carat)", "", "&e> Choose on the left to change it"));
-                        case "3" -> menu.replaceExistingItem(32, new CustomItemStack(Material.GOLD_INGOT, "&6Current Recipe: &fGold Ingot &7(10 Carat)", "", "&e> Choose on the left to change it"));
-                        case "4" -> menu.replaceExistingItem(32, new CustomItemStack(Material.GOLD_INGOT, "&6Current Recipe: &fGold Ingot &7(12 Carat)", "", "&e> Choose on the left to change it"));
-                        case "5" -> menu.replaceExistingItem(32, new CustomItemStack(Material.GOLD_INGOT, "&6Current Recipe: &fGold Ingot &7(14 Carat)", "", "&e> Choose on the left to change it"));
-                        case "6" -> menu.replaceExistingItem(32, new CustomItemStack(Material.GOLD_INGOT, "&6Current Recipe: &fGold Ingot &7(16 Carat)", "", "&e> Choose on the left to change it"));
-                        case "7" -> menu.replaceExistingItem(32, new CustomItemStack(Material.GOLD_INGOT, "&6Current Recipe: &fGold Ingot &7(18 Carat)", "", "&e> Choose on the left to change it"));
-                        case "8" -> menu.replaceExistingItem(32, new CustomItemStack(Material.GOLD_INGOT, "&6Current Recipe: &fGold Ingot &7(20 Carat)", "", "&e> Choose on the left to change it"));
-                        case "9" -> menu.replaceExistingItem(32, new CustomItemStack(Material.GOLD_INGOT, "&6Current Recipe: &fGold Ingot &7(22 Carat)", "", "&e> Choose on the left to change it"));
-                        case "10" -> menu.replaceExistingItem(32, new CustomItemStack(Material.GOLD_INGOT, "&6Current Recipe: &fGold Ingot &7(24 Carat)", "", "&e> Choose on the left to change it"));
-                        case "11" -> menu.replaceExistingItem(32, new CustomItemStack(Material.RED_STAINED_GLASS_PANE, "&6Current Recipe: &cNONE", "", "&e> Choose on the left to change it"));
+                        case "0" -> menu.replaceExistingItem(32, CustomItemStack.create(Material.GOLD_INGOT, "&6Current Recipe: &fGold Ingot &7(4 Carat)", "", "&e> Choose on the left to change it"));
+                        case "1" -> menu.replaceExistingItem(32, CustomItemStack.create(Material.GOLD_INGOT, "&6Current Recipe: &fGold Ingot &7(6 Carat)", "", "&e> Choose on the left to change it"));
+                        case "2" -> menu.replaceExistingItem(32, CustomItemStack.create(Material.GOLD_INGOT, "&6Current Recipe: &fGold Ingot &7(8 Carat)", "", "&e> Choose on the left to change it"));
+                        case "3" -> menu.replaceExistingItem(32, CustomItemStack.create(Material.GOLD_INGOT, "&6Current Recipe: &fGold Ingot &7(10 Carat)", "", "&e> Choose on the left to change it"));
+                        case "4" -> menu.replaceExistingItem(32, CustomItemStack.create(Material.GOLD_INGOT, "&6Current Recipe: &fGold Ingot &7(12 Carat)", "", "&e> Choose on the left to change it"));
+                        case "5" -> menu.replaceExistingItem(32, CustomItemStack.create(Material.GOLD_INGOT, "&6Current Recipe: &fGold Ingot &7(14 Carat)", "", "&e> Choose on the left to change it"));
+                        case "6" -> menu.replaceExistingItem(32, CustomItemStack.create(Material.GOLD_INGOT, "&6Current Recipe: &fGold Ingot &7(16 Carat)", "", "&e> Choose on the left to change it"));
+                        case "7" -> menu.replaceExistingItem(32, CustomItemStack.create(Material.GOLD_INGOT, "&6Current Recipe: &fGold Ingot &7(18 Carat)", "", "&e> Choose on the left to change it"));
+                        case "8" -> menu.replaceExistingItem(32, CustomItemStack.create(Material.GOLD_INGOT, "&6Current Recipe: &fGold Ingot &7(20 Carat)", "", "&e> Choose on the left to change it"));
+                        case "9" -> menu.replaceExistingItem(32, CustomItemStack.create(Material.GOLD_INGOT, "&6Current Recipe: &fGold Ingot &7(22 Carat)", "", "&e> Choose on the left to change it"));
+                        case "10" -> menu.replaceExistingItem(32, CustomItemStack.create(Material.GOLD_INGOT, "&6Current Recipe: &fGold Ingot &7(24 Carat)", "", "&e> Choose on the left to change it"));
+                        case "11" -> menu.replaceExistingItem(32, CustomItemStack.create(Material.RED_STAINED_GLASS_PANE, "&6Current Recipe: &cNONE", "", "&e> Choose on the left to change it"));
                     }
                 }
             }
@@ -232,7 +232,7 @@ public class ElectricGoldRefinery extends SlimefunItem implements EnergyNetCompo
                 progress.put(b, timeleft - 1);
             }
             else {
-                inv.replaceExistingItem(23, new CustomItemStack(Material.BLACK_STAINED_GLASS_PANE, " "));
+                inv.replaceExistingItem(23, CustomItemStack.create(Material.BLACK_STAINED_GLASS_PANE, " "));
 
                 for (ItemStack output : processing.get(b).getOutput()) {
                     inv.pushItem(output.clone(), getOutputSlots());
@@ -270,7 +270,7 @@ public class ElectricGoldRefinery extends SlimefunItem implements EnergyNetCompo
         if (goldDust2 != null && SlimefunUtils.isItemSimilar(goldDust2, SlimefunItems.GOLD_DUST.item(), true, false)) {
             goldDustList.add(goldDust2);
         } else {
-            goldDustList.add(new SlimefunItemStack(SlimefunItems.GOLD_DUST, 0));
+            goldDustList.add(new SlimefunItemStack(SlimefunItems.GOLD_DUST, 0).item());
         }
         int goldDusts = 0;
         int goldTier = Integer.parseInt(g);
@@ -321,8 +321,8 @@ public class ElectricGoldRefinery extends SlimefunItem implements EnergyNetCompo
             preset.addItem(i, new SlimefunItemStack("_UI_OUTPUT_SLOT", Material.ORANGE_STAINED_GLASS_PANE, " ").item(), ChestMenuUtils.getEmptyClickHandler());
         }
 
-        preset.addItem(23, new CustomItemStack(Material.BLACK_STAINED_GLASS_PANE, " "), ChestMenuUtils.getEmptyClickHandler());
-        preset.addItem(46, new CustomItemStack(Material.RED_STAINED_GLASS_PANE, "&cNONE"), ChestMenuUtils.getEmptyClickHandler());
+        preset.addItem(23, CustomItemStack.create(Material.BLACK_STAINED_GLASS_PANE, " "), ChestMenuUtils.getEmptyClickHandler());
+        preset.addItem(46, CustomItemStack.create(Material.RED_STAINED_GLASS_PANE, "&cNONE"), ChestMenuUtils.getEmptyClickHandler());
 
         NamespacedKey key = new NamespacedKey(FoxyMachines.getInstance(), "nonstackable");
 
