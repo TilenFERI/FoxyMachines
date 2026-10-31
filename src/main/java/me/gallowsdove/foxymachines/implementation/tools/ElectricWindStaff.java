@@ -19,7 +19,7 @@ public class ElectricWindStaff extends SlimefunItem implements Rechargeable {
     private static final float COST = 0.75F;
 
     public ElectricWindStaff() {
-        super(Items.TOOLS_ITEM_GROUP.item(), Items.ELECTRIC_WIND_STAFF.item(), RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+        super(Items.TOOLS_ITEM_GROUP, Items.ELECTRIC_WIND_STAFF, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 null, SlimefunItems.POWER_CRYSTAL.item(), null,
                 SlimefunItems.ELECTRIC_MOTOR.item(), SlimefunItems.STAFF_WIND.item(), SlimefunItems.ELECTRIC_MOTOR.item(),
                 null, SlimefunItems.MEDIUM_CAPACITOR.item(), null
