@@ -184,7 +184,7 @@ public class HeadlessHorseman extends CustomBoss {
 
         event.getDrops().clear();
         Location location = event.getEntity().getLocation();
-        location.getWorld().dropItemNaturally(location, new SlimefunItemStack(Items.VILE_PUMPKIN, 1));
+        location.getWorld().dropItemNaturally(location, new SlimefunItemStack(Items.VILE_PUMPKIN, 1).item());
         location.getWorld().spawn(location, ExperienceOrb.class).setExperience(2000 + ThreadLocalRandom.current().nextInt(800));
     }
 
