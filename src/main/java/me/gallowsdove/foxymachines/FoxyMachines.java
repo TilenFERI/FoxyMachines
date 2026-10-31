@@ -13,6 +13,7 @@ import me.gallowsdove.foxymachines.tasks.QuestTicker;
 import me.gallowsdove.foxymachines.utils.QuestUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.scheduler.BukkitRunnable;
 
 import java.io.File;
 
@@ -68,11 +69,11 @@ public class FoxyMachines extends JavaPlugin implements SlimefunAddon {
         }
 
         Bukkit.getScheduler().runTask(this, () -> ForcefieldDome.INSTANCE.setupDomes());
-        Bukkit.getScheduler().runTaskTimer(this, new QuestTicker(), 240L, 10L);
-        Bukkit.getScheduler().runTaskTimer(this, new GhostBlockTask(), 100L, 100L);
+        new QuestTicker().runTaskTimer(this, 240L, 10L);
+        new GhostBlockTask().runTaskTimer(this, 100L, 100L);
 
         if (getConfig().getBoolean("custom-mobs")) {
-            Bukkit.getScheduler().runTaskTimer(this, new MobTicker(), 2L, 2L);
+            new MobTicker().runTaskTimer(this, 2L, 2L);
         }
 
         getLogger().info("FoxyMachines enabled.");
