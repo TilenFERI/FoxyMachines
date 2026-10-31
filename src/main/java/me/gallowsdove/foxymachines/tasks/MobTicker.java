@@ -4,13 +4,14 @@ import me.gallowsdove.foxymachines.abstracts.CustomMob;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
+import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 
-public class MobTicker implements Runnable {
+public class MobTicker extends BukkitRunnable {
     int tick = 0;
 
     @Override
