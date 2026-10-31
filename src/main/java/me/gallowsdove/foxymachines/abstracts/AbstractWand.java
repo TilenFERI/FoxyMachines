@@ -1,6 +1,6 @@
 package me.gallowsdove.foxymachines.abstracts;
 
-import io.github.mooy1.infinitylib.core.AddonConfig;
+import org.bukkit.configuration.file.FileConfiguration;
 import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
@@ -40,11 +40,11 @@ public abstract class AbstractWand extends SlimefunItem implements NotPlaceable,
 
     public static void init() {
         if (!WHITELIST.isEmpty() || !BLACKLIST.isEmpty()) {
-            FoxyMachines.log(Level.WARNING, "Attempted to initialize AbstractWand after already initialized!");
+            FoxyMachines.getInstance().getLogger().log(Level.WARNING, "Attempted to initialize AbstractWand after already initialized!");
             return;
         }
 
-        AddonConfig config = FoxyMachines.getInstance().getConfig();
+        FileConfiguration config = FoxyMachines.getInstance().getConfig();
         loadList("fill-wand-white-list", WHITELIST, config.getStringList("fill-wand-white-list"));
         loadList("fill-wand-black-list", BLACKLIST, config.getStringList("fill-wand-black-list"));
     }
