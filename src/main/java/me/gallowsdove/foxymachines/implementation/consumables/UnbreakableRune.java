@@ -67,7 +67,7 @@ public class UnbreakableRune extends SimpleSlimefunItem<ItemDropHandler> {
         return (e, p, item) -> {
             if (isItem(item.getItemStack())) {
 
-                if (!SlimefunUtils.canPlayerUseItem(p, Items.UNBREAKABLE_RUNE , true)) {
+                if (!SlimefunUtils.canPlayerUseItem(p, Items.UNBREAKABLE_RUNE.item() , true)) {
                     return true;
                 }
 
