@@ -13,10 +13,10 @@ import javax.annotation.ParametersAreNonnullByDefault;
 
 public class Elucidator extends OnHitWeapon {
     public Elucidator(boolean customMobsEnabled) {
-        super(Items.WEAPONS_AND_ARMORS_ITEM_GROUP, Items.ELUCIDATOR, RecipeType.ANCIENT_ALTAR, new ItemStack[]{
-                Items.EQUANIMOUS_GEM, Items.CURSED_SWORD, Items.EQUANIMOUS_GEM,
-                Items.BUCKET_OF_BLOOD, customMobsEnabled ? Items.PIXIE_QUEEN_HEART : Items.DEMONIC_PLATE, Items.BUCKET_OF_BLOOD,
-                Items.EQUANIMOUS_GEM, Items.CELESTIAL_SWORD, Items.EQUANIMOUS_GEM
+        super(Items.WEAPONS_AND_ARMORS_ITEM_GROUP.item(), Items.ELUCIDATOR.item(), RecipeType.ANCIENT_ALTAR, new ItemStack[]{
+                Items.EQUANIMOUS_GEM.item(), Items.CURSED_SWORD.item(), Items.EQUANIMOUS_GEM.item(),
+                Items.BUCKET_OF_BLOOD.item(), customMobsEnabled ? Items.PIXIE_QUEEN_HEART.item() : Items.DEMONIC_PLATE.item(), Items.BUCKET_OF_BLOOD.item(),
+                Items.EQUANIMOUS_GEM.item(), Items.CELESTIAL_SWORD.item(), Items.EQUANIMOUS_GEM.item()
         });
     }
 
