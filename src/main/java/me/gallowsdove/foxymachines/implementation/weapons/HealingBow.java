@@ -16,9 +16,9 @@ public class HealingBow extends SlimefunBow {
 
     public HealingBow() {
         super(Items.WEAPONS_AND_ARMORS_ITEM_GROUP, Items.HEALING_BOW, new ItemStack[] {
-                null, SlimefunItems.SYNTHETIC_DIAMOND, Items.REINFORCED_STRING,
-                SlimefunItems.SYNTHETIC_DIAMOND, SlimefunItems.ESSENCE_OF_AFTERLIFE, Items.REINFORCED_STRING,
-                null, SlimefunItems.SYNTHETIC_DIAMOND, Items.REINFORCED_STRING
+                null, SlimefunItems.SYNTHETIC_DIAMOND.item(), Items.REINFORCED_STRING.item(),
+                SlimefunItems.SYNTHETIC_DIAMOND.item(), SlimefunItems.ESSENCE_OF_AFTERLIFE.item(), Items.REINFORCED_STRING.item(),
+                null, SlimefunItems.SYNTHETIC_DIAMOND.item(), Items.REINFORCED_STRING.item()
         });
     }
 
