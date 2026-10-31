@@ -4,9 +4,9 @@ import io.github.mooy1.infinitylib.common.Events;
 import lombok.Getter;
 import me.gallowsdove.foxymachines.FoxyMachines;
 
-import io.github.thebusybiscuit.slimefun4.libraries.commons.lang.Validate;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.common.ChatColors;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.data.persistent.PersistentDataAPI;
+import io.github.thebusybiscuit.slimefun5.libraries.commons.lang.Validate;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.common.ChatColors;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.data.persistent.PersistentDataAPI;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
