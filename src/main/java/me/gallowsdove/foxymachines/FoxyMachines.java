@@ -35,6 +35,7 @@ public class FoxyMachines extends JavaPlugin implements SlimefunAddon {
     public void onEnable() {
         instance = this;
         saveDefaultConfig();
+        folderPath = getDataFolder().getAbsolutePath() + File.separator + "data-storage" + File.separator;
 
         // Register listeners through Bukkit instead of the removed InfinityLib event helper.
         Bukkit.getPluginManager().registerEvents(new ChunkLoadListener(), this);
@@ -58,7 +59,6 @@ public class FoxyMachines extends JavaPlugin implements SlimefunAddon {
         ItemSetup.INSTANCE.init();
         ResearchSetup.INSTANCE.init();
 
-        folderPath = getDataFolder().getAbsolutePath() + File.separator + "data-storage" + File.separator;
         try {
             BerryBushTrimmer.loadTrimmedBlocks();
             ForcefieldDome.loadDomeLocations();
@@ -80,12 +80,14 @@ public class FoxyMachines extends JavaPlugin implements SlimefunAddon {
 
     @Override
     public void onDisable() {
-        try {
-            BerryBushTrimmer.saveTrimmedBlocks();
-            ForcefieldDome.saveDomeLocations();
-        } catch (java.io.IOException exception) {
+        if (folderPath != null) {
+            try {
+                BerryBushTrimmer.saveTrimmedBlocks();
+                ForcefieldDome.saveDomeLocations();
+            } catch (java.io.IOException exception) {
             getLogger().severe("Could not save FoxyMachines data: " + exception.getMessage());
-            exception.printStackTrace();
+                exception.printStackTrace();
+            }
         }
 
         if (getConfig().getBoolean("custom-mobs")) {
