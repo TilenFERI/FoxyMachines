@@ -13,7 +13,7 @@ import org.bukkit.inventory.ItemStack;
 
 public class FillWand extends AbstractWand {
     public FillWand() {
-        super(Items.FILL_WAND.item(), RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+        super(Items.FILL_WAND, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 Items.AQUATIC_NETHERITE_INGOT.item(), Items.WIRELESS_TRANSMITTER.item(), Items.AQUATIC_NETHERITE_INGOT.item(),
                 Items.DEMONIC_PLATE.item(), SlimefunItems.PROGRAMMABLE_ANDROID_2.item(), Items.DEMONIC_PLATE.item(),
                 Items.SWEETENED_SWEET_INGOT.item(), Items.WIRELESS_TRANSMITTER.item(), Items.SWEETENED_SWEET_INGOT.item()
