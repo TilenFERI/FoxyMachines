@@ -53,9 +53,9 @@ public class PotionMixer extends SlimefunItem implements EnergyNetComponent {
 
     public PotionMixer() {
         super(Items.MACHINES_ITEM_GROUP, Items.POTION_MIXER, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
-                SlimefunItems.CARBONADO, SlimefunItems.GOLD_24K, SlimefunItems.CARBONADO,
-                SlimefunItems.ELECTRIC_MOTOR, new ItemStack(Material.BREWING_STAND), SlimefunItems.ELECTRIC_MOTOR,
-                SlimefunItems.GOLD_24K, SlimefunItems.MEDIUM_CAPACITOR, SlimefunItems.GOLD_24K
+                SlimefunItems.CARBONADO.item(), SlimefunItems.GOLD_24K.item(), SlimefunItems.CARBONADO.item(),
+                SlimefunItems.ELECTRIC_MOTOR.item(), new ItemStack(Material.BREWING_STAND), SlimefunItems.ELECTRIC_MOTOR.item(),
+                SlimefunItems.GOLD_24K.item(), SlimefunItems.MEDIUM_CAPACITOR.item(), SlimefunItems.GOLD_24K.item()
         });
 
 
@@ -196,7 +196,7 @@ public class PotionMixer extends SlimefunItem implements EnergyNetComponent {
                 progress.put(b, timeleft - 1);
             }
             else {
-                inv.replaceExistingItem(13, new CustomItemStack(Material.BLACK_STAINED_GLASS_PANE, " "));
+                inv.replaceExistingItem(13, CustomItemStack.create(Material.BLACK_STAINED_GLASS_PANE, " "));
 
                 for (ItemStack output : processing.get(b).getOutput()) {
                     inv.pushItem(output.clone(), getOutputSlots());
@@ -431,11 +431,11 @@ public class PotionMixer extends SlimefunItem implements EnergyNetComponent {
         }
 
         for (int i : BORDER_IN) {
-            preset.addItem(i, new SlimefunItemStack("_UI_INPUT_SLOT", Material.CYAN_STAINED_GLASS_PANE, " "), ChestMenuUtils.getEmptyClickHandler());
+            preset.addItem(i, CustomItemStack.create(Material.CYAN_STAINED_GLASS_PANE, " "), ChestMenuUtils.getEmptyClickHandler());
         }
 
         for (int i : BORDER_OUT) {
-            preset.addItem(i, new SlimefunItemStack("_UI_OUTPUT_SLOT", Material.ORANGE_STAINED_GLASS_PANE, " "), ChestMenuUtils.getEmptyClickHandler());
+            preset.addItem(i, CustomItemStack.create(Material.ORANGE_STAINED_GLASS_PANE, " "), ChestMenuUtils.getEmptyClickHandler());
         }
 
         preset.addItem(13, new CustomItemStack(Material.BLACK_STAINED_GLASS_PANE, " "), ChestMenuUtils.getEmptyClickHandler());
