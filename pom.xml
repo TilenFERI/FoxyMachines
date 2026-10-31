@@ -104,9 +104,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.github.Slimefun5</groupId>
+            <groupId>local.slimefun</groupId>
             <artifactId>Slimefun5</artifactId>
-            <version>master-SNAPSHOT</version>
+            <version>5.3.3</version>
             <scope>provided</scope>
         </dependency>
 
