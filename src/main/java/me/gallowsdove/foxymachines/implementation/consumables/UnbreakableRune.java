@@ -1,7 +1,7 @@
 package me.gallowsdove.foxymachines.implementation.consumables;
 
 import io.github.mooy1.infinitylib.common.Scheduler;
-import io.github.mooy1.infinitylib.core.AddonConfig;
+import org.bukkit.configuration.file.FileConfiguration;
 import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun5.core.handlers.ItemDropHandler;
@@ -38,11 +38,11 @@ public class UnbreakableRune extends SimpleSlimefunItem<ItemDropHandler> {
 
     public static void init() {
         if (!BLACKLIST.isEmpty()) {
-            FoxyMachines.log(Level.WARNING, "Attempted to initialize UnbreakableRune after already initialized!");
+            FoxyMachines.getInstance().getLogger().log(Level.WARNING, "Attempted to initialize UnbreakableRune after already initialized!");
             return;
         }
 
-        AddonConfig config = FoxyMachines.getInstance().getConfig();
+        FileConfiguration config = FoxyMachines.getInstance().getConfig();
         ConfigurationSection blacklist = config.getConfigurationSection("unbreakable-rune-blacklist");
         if (blacklist == null) {
             return;
@@ -55,9 +55,9 @@ public class UnbreakableRune extends SimpleSlimefunItem<ItemDropHandler> {
 
     public UnbreakableRune() {
         super(Items.TOOLS_ITEM_GROUP, Items.UNBREAKABLE_RUNE, RecipeType.ANCIENT_ALTAR, new ItemStack[] {
-                Items.DAMIENIUM, Items.MAGIC_LUMP_5, Items.DAMIENIUM,
-                SlimefunItems.ESSENCE_OF_AFTERLIFE, SlimefunItems.LIGHTNING_RUNE , SlimefunItems.ESSENCE_OF_AFTERLIFE,
-                Items.DAMIENIUM, Items.MAGIC_LUMP_5, Items.DAMIENIUM
+                Items.DAMIENIUM.item(), Items.MAGIC_LUMP_5.item(), Items.DAMIENIUM.item(),
+                SlimefunItems.ESSENCE_OF_AFTERLIFE.item(), SlimefunItems.LIGHTNING_RUNE.item(), SlimefunItems.ESSENCE_OF_AFTERLIFE.item(),
+                Items.DAMIENIUM.item(), Items.MAGIC_LUMP_5.item(), Items.DAMIENIUM.item()
         });
     }
 
