@@ -59,8 +59,13 @@ public class FoxyMachines extends JavaPlugin implements SlimefunAddon {
         ResearchSetup.INSTANCE.init();
 
         folderPath = getDataFolder().getAbsolutePath() + File.separator + "data-storage" + File.separator;
-        BerryBushTrimmer.loadTrimmedBlocks();
-        ForcefieldDome.loadDomeLocations();
+        try {
+            BerryBushTrimmer.loadTrimmedBlocks();
+            ForcefieldDome.loadDomeLocations();
+        } catch (java.io.IOException exception) {
+            getLogger().severe("Could not load FoxyMachines data: " + exception.getMessage());
+            exception.printStackTrace();
+        }
 
         Bukkit.getScheduler().runTask(this, () -> ForcefieldDome.INSTANCE.setupDomes());
         Bukkit.getScheduler().runTaskTimer(this, new QuestTicker(), 240L, 10L);
@@ -75,8 +80,13 @@ public class FoxyMachines extends JavaPlugin implements SlimefunAddon {
 
     @Override
     public void onDisable() {
-        BerryBushTrimmer.saveTrimmedBlocks();
-        ForcefieldDome.saveDomeLocations();
+        try {
+            BerryBushTrimmer.saveTrimmedBlocks();
+            ForcefieldDome.saveDomeLocations();
+        } catch (java.io.IOException exception) {
+            getLogger().severe("Could not save FoxyMachines data: " + exception.getMessage());
+            exception.printStackTrace();
+        }
 
         if (getConfig().getBoolean("custom-mobs")) {
             CustomBoss.removeBossBars();
