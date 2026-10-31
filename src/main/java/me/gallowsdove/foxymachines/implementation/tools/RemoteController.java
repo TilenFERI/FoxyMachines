@@ -24,10 +24,10 @@ public class RemoteController extends SlimefunItem implements NotPlaceable, Rech
     private static final float COST = 50F;
 
     public RemoteController() {
-        super(Items.TOOLS_ITEM_GROUP, Items.REMOTE_CONTROLLER, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
-                Items.DAMIENIUM, Items.WIRELESS_TRANSMITTER, Items.DAMIENIUM,
-                Items.DAMIENIUM, Items.WIRELESS_TRANSMITTER, Items.DAMIENIUM,
-                Items.DAMIENIUM, Items.WIRELESS_TRANSMITTER, Items.DAMIENIUM
+        super(Items.TOOLS_ITEM_GROUP.item(), Items.REMOTE_CONTROLLER.item(), RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+                Items.DAMIENIUM.item(), Items.WIRELESS_TRANSMITTER.item(), Items.DAMIENIUM.item(),
+                Items.DAMIENIUM.item(), Items.WIRELESS_TRANSMITTER.item(), Items.DAMIENIUM.item(),
+                Items.DAMIENIUM.item(), Items.WIRELESS_TRANSMITTER.item(), Items.DAMIENIUM.item()
         });
     }
 
