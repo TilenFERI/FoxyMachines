@@ -18,7 +18,7 @@ public class ElectricFireStaffII extends SlimefunItem implements Rechargeable {
     private static final float COST = 1.5F;
 
     public ElectricFireStaffII() {
-        super(Items.TOOLS_ITEM_GROUP.item(), Items.ELECTRIC_FIRE_STAFF_II.item(), RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
+        super(Items.TOOLS_ITEM_GROUP, Items.ELECTRIC_FIRE_STAFF_II, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
                 SlimefunItems.CARBONADO.item(), SlimefunItems.POWER_CRYSTAL.item(), SlimefunItems.CARBONADO.item(),
                 SlimefunItems.HEATING_COIL.item(), Items.ELECTRIC_FIRE_STAFF.item(), SlimefunItems.HEATING_COIL.item(),
                 SlimefunItems.REINFORCED_ALLOY_INGOT.item(), SlimefunItems.MEDIUM_CAPACITOR.item(), SlimefunItems.REINFORCED_ALLOY_INGOT.item()
