@@ -106,7 +106,7 @@
         <dependency>
             <groupId>com.github.Slimefun5</groupId>
             <artifactId>Slimefun5</artifactId>
-            <version>5.3.3.6</version>
+            <version>5.3.3</version>
             <scope>provided</scope>
         </dependency>
 
