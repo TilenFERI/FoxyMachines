@@ -53,7 +53,7 @@ public class QuestUtils {
 
     public static void init() {
         if (!QUEST_MOBS.isEmpty()) {
-            FoxyMachines.log(Level.WARNING, "Attempted to initialize QuestUtils after already initialized!");
+            FoxyMachines.getInstance().getLogger().log(Level.WARNING, "Attempted to initialize QuestUtils after already initialized!");
             return;
         }
 
@@ -61,7 +61,7 @@ public class QuestUtils {
             try {
                 QuestUtils.QUEST_MOBS.add(EntityType.valueOf(questMob));
             } catch (IllegalArgumentException ignored) {
-                FoxyMachines.log(Level.WARNING, "Invalid Entity Type in \"quest-mobs\": " + questMob);
+                FoxyMachines.getInstance().getLogger().log(Level.WARNING, "Invalid Entity Type in \"quest-mobs\": " + questMob);
             }
         }
     }
