@@ -1,6 +1,6 @@
 package me.gallowsdove.foxymachines.implementation.consumables;
 
-import io.github.mooy1.infinitylib.common.Scheduler;
+import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
@@ -71,7 +71,11 @@ public class UnbreakableRune extends SimpleSlimefunItem<ItemDropHandler> {
                     return true;
                 }
 
-                Scheduler.run(20, () -> activate(p, item));
+                Bukkit.getScheduler().runTaskLater(
+                        FoxyMachines.getInstance(),
+                        () -> activate(p, item),
+                        20L
+                );
 
                 return true;
             }
@@ -95,7 +99,7 @@ public class UnbreakableRune extends SimpleSlimefunItem<ItemDropHandler> {
             if (itemStack.getAmount() == 1) {
                 l.getWorld().strikeLightningEffect(l);
 
-                Scheduler.run(10, () -> {
+                Bukkit.getScheduler().runTaskLater(FoxyMachines.getInstance(), () -> {
                     if (rune.isValid() && item.isValid() && itemStack.getAmount() == 1) {
 
                         l.getWorld().createExplosion(l, 0);
@@ -111,7 +115,7 @@ public class UnbreakableRune extends SimpleSlimefunItem<ItemDropHandler> {
                     } else {
                         p.sendMessage(ChatColor.LIGHT_PURPLE + "Your item could not be made Unbreakable");
                     }
-                });
+                }, 10L);
             } else {
                 p.sendMessage(ChatColor.LIGHT_PURPLE + "Your item could not be made Unbreakable");
             }
